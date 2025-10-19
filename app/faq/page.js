@@ -1,0 +1,1 @@
+export default function FAQ(){return <div className='max-w-6xl mx-auto p-8'><h1 className='text-2xl font-bold'>FAQs (placeholder)</h1></div>}

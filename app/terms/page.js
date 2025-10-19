@@ -1,0 +1,1 @@
+export default function Terms(){return <div className='max-w-6xl mx-auto p-8'><h1 className='text-2xl font-bold'>Terms & Conditions (placeholder)</h1></div>}
