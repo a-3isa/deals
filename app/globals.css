@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root{
-  --brand-accent: #0d9488;
-  --brand-accent-2: #0f766e;
-  --ink: #0f172a;
-  --muted: #475569;
-  --soft-bg: #ecfeff;
-  --soft-panel: #f8fafc;
-  --footer-bg: #0b1020;
-  --border: #dbeafe;
+  --brand-accent: #2f6f4e;
+  --brand-accent-2: #24543d;
+  --signal: #b7791f;
+  --ink: #18231d;
+  --muted: #5c675f;
+  --paper: #fbfaf4;
+  --soft-bg: #f1f7f0;
+  --soft-panel: #fffdf8;
+  --footer-bg: #101811;
+  --border: #dedfd3;
 }
 
 html, body, #__next { height: 100%; }
@@ -20,35 +22,30 @@ body {
   font-family: "Plus Jakarta Sans", "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial;
   color: var(--ink);
-  background:
-    radial-gradient(900px 400px at 95% -10%, #ccfbf1 0%, transparent 65%),
-    radial-gradient(900px 460px at 5% 0%, #dbeafe 0%, transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+  background: var(--paper);
 }
 
 a, button {
   transition: all 220ms ease;
 }
 
-/* Typography sizing inspired by Rakuten-like mobile layout */
-h1 { font-size: 2.25rem; line-height: 1.1; } /* 36px */
-@media (min-width: 768px) { h1 { font-size: 3rem; } } /* 48px */
+h1 { font-size: 2.25rem; line-height: 1.05; }
+@media (min-width: 768px) { h1 { font-size: 4rem; } }
 
-h2 { font-size: 1.5rem; } /* 24px */
-@media (min-width: 768px) { h2 { font-size: 2rem; } } /* 32px */
+h2 { font-size: 1.75rem; line-height: 1.15; }
+@media (min-width: 768px) { h2 { font-size: 2.75rem; } }
 
 p.lead { font-size: 1rem; }
 @media (min-width: 768px) { p.lead { font-size: 1.125rem; } }
 
 .panel {
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--soft-panel);
   border: 1px solid var(--border);
-  box-shadow: 0 12px 38px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 14px 34px rgba(24, 35, 29, 0.08);
 }
 
 .hero-title {
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .fade-up {
@@ -65,8 +62,49 @@ p.lead { font-size: 1rem; }
 }
 
 .lift-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 46px rgba(15, 23, 42, 0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(24, 35, 29, 0.13);
+}
+
+.section-band {
+  border-top: 1px solid var(--border);
+}
+
+.eyebrow {
+  color: var(--signal);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero-image {
+  background-image:
+    linear-gradient(90deg, rgba(251, 250, 244, 0.98) 0%, rgba(251, 250, 244, 0.88) 42%, rgba(251, 250, 244, 0.34) 72%, rgba(251, 250, 244, 0.1) 100%),
+    url("/assets/store-card-2.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.btn-primary {
+  background: var(--brand-accent);
+  color: #fffdf8;
+  box-shadow: 0 10px 22px rgba(47, 111, 78, 0.22);
+}
+
+.btn-primary:hover {
+  background: var(--brand-accent-2);
+}
+
+.btn-secondary {
+  background: #fffdf8;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-accent);
+  color: var(--brand-accent-2);
 }
 
 @keyframes fadeUp {

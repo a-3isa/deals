@@ -5,6 +5,9 @@ import Footer from '../components/Footer'
 export const metadata = {
   title: 'Deals+ - Keep It In Pocket',
   description: 'App-only deals, promo codes, and cashback from your favorite stores.',
+  icons: {
+    icon: '/assets/logo-dealsplus.svg',
+  },
 }
 
 export default function RootLayout({ children }) {

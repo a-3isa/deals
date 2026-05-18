@@ -12,17 +12,17 @@
   ]
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
       {storeCards.map((src, idx) => (
         <div
           key={idx}
-          className="group panel rounded-2xl p-3 md:p-4 overflow-hidden fade-up lift-hover"
+          className="group rounded-lg border border-[var(--border)] bg-white p-2 overflow-hidden fade-up lift-hover"
           style={{ animationDelay: `${idx * 70}ms` }}
         >
           <img
             src={src}
             alt={`deals-card-${idx + 1}`}
-            className="w-full h-32 md:h-36 rounded-xl object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]"
+            className="w-full h-32 md:h-40 rounded-md object-cover object-center transition-transform duration-300 group-hover:scale-[1.025]"
           />
         </div>
       ))}

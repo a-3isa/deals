@@ -19,14 +19,15 @@
   ]
 
   return (
-    <section className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16">
-      <div className="panel rounded-3xl p-6 md:p-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900">FAQs</h1>
+    <section className="max-w-4xl mx-auto px-4 md:px-6 py-14 md:py-20">
+      <div className="rounded-lg border border-[var(--border)] bg-[var(--soft-panel)] p-6 md:p-10">
+        <p className="eyebrow mb-3">Support</p>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-[var(--ink)]">FAQs</h1>
         <div className="mt-6 space-y-4">
           {faqs.map((item) => (
-            <div key={item.q} className="rounded-2xl border border-cyan-100 bg-white p-4 md:p-5">
-              <h2 className="text-lg font-semibold text-slate-900">{item.q}</h2>
-              <p className="mt-2 text-slate-600">{item.a}</p>
+            <div key={item.q} className="rounded-lg border border-[var(--border)] bg-white p-4 md:p-5">
+              <h2 className="text-lg font-bold text-[var(--ink)]">{item.q}</h2>
+              <p className="mt-2 text-[var(--muted)]">{item.a}</p>
             </div>
           ))}
         </div>
