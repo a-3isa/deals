@@ -1,5 +1,15 @@
 export default function StoresGrid(){
-  const logos = Array.from({length:9}).map((_,i)=>`/assets/stores-placeholder.svg`);
+  const logos = [
+    '/assets/store-logo-1.png',
+    '/assets/store-logo-2.png',
+    '/assets/store-logo-3.png',
+    '/assets/store-logo-4.png',
+    '/assets/store-logo-5.png',
+    '/assets/store-logo-6.png',
+    '/assets/store-logo-7.png',
+    '/assets/store-logo-8.png',
+    '/assets/store-logo-9.png',
+  ];
   return (
     <div className="grid grid-cols-3 gap-4">
       {logos.map((src,idx)=>(

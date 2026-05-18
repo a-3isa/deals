@@ -14,7 +14,7 @@ export default function Header(){
         {/* left: logo */}
         <div className="flex items-center gap-3">
           <Image
-            src="/assets/logo.svg"
+            src="/assets/logo-dealsplus.svg"
             alt="Deals+"
             width={144}
             height={40}

@@ -36,7 +36,7 @@ export default function Home() {
           <div className="relative w-full h-80 md:h-[640px] lg:h-[760px]">
             {/* app screenshot: anchored to top, increased height so it reaches toward middle */}
             <img
-              src="/assets/hero-placeholder.svg"
+              src="/assets/hero-phone.png"
               alt="app screenshot"
               className="absolute left-0 top-0 h-[60%] md:h-[70%] w-auto md:w-[480px] rounded-xl shadow-xl object-cover"
             />
@@ -44,7 +44,7 @@ export default function Home() {
             <div className="absolute right-0 bottom-0 h-[60%] md:h-[70%] flex items-center">
               <div className="bg-white p-4 rounded-xl shadow-lg mx-4">
                 <img
-                  src="/assets/dummy-qr.svg"
+                  src="/assets/qr-download.png"
                   alt="qr code"
                   className="w-32 h-32 md:w-56 md:h-56 object-contain"
                 />
@@ -95,7 +95,7 @@ export default function Home() {
         <div className="flex justify-center">
           <div className="bg-white p-4 rounded-xl shadow-lg">
             <img
-              src="/assets/dummy-qr.svg"
+              src="/assets/qr-download.png"
               alt="qr"
               className="w-32 h-32 md:w-56 md:h-56 object-contain"
             />
