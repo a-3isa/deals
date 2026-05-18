@@ -1,36 +1,39 @@
-export default function Footer(){
+﻿export default function Footer() {
   return (
-    <footer className="mt-12" style={{background: 'var(--footer-bg)', color:'#e5e7eb'}}>
-      <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-6">
+    <footer className="mt-16 bg-[var(--footer-bg)] text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <h4 className="font-semibold mb-3">Download</h4>
-          <ul className="text-sm">
-            <li><a href="#" className="text-gray-200">Android (Play Store)</a></li>
-            <li><a href="#" className="text-gray-200">iOS (App Store)</a></li>
+          <h4 className="font-semibold mb-3 text-white">Download</h4>
+          <ul className="text-sm space-y-2 text-slate-300">
+            <li><a href="#download" className="hover:text-cyan-300 transition-colors">Android (Play Store)</a></li>
+            <li><a href="#download" className="hover:text-cyan-300 transition-colors">iOS (App Store)</a></li>
           </ul>
         </div>
+
         <div>
-          <h4 className="font-semibold mb-3">About</h4>
-          <ul className="text-sm">
-            <li><a href="/about">About us</a></li>
-            <li><a href="/terms">Terms & Conditions</a></li>
-            <li><a href="/faq">FAQs</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/contact">Contact us</a></li>
+          <h4 className="font-semibold mb-3 text-white">About</h4>
+          <ul className="text-sm space-y-2 text-slate-300">
+            <li><a href="/about" className="hover:text-cyan-300 transition-colors">About us</a></li>
+            <li><a href="/terms" className="hover:text-cyan-300 transition-colors">Terms & Conditions</a></li>
+            <li><a href="/faq" className="hover:text-cyan-300 transition-colors">FAQs</a></li>
+            <li><a href="/privacy" className="hover:text-cyan-300 transition-colors">Privacy Policy</a></li>
+            <li><a href="/contact" className="hover:text-cyan-300 transition-colors">Contact us</a></li>
           </ul>
         </div>
+
         <div>
-          <h4 className="font-semibold mb-3">Stores & brands</h4>
-          <ul className="text-sm">
+          <h4 className="font-semibold mb-3 text-white">Top stores</h4>
+          <ul className="text-sm space-y-2 text-slate-300">
+            <li>AliExpress</li>
             <li>Amazon</li>
             <li>eBay</li>
             <li>Walmart</li>
-            <li>AliExpress</li>
           </ul>
         </div>
+
         <div>
-          <h4 className="font-semibold mb-3">Popular categories</h4>
-          <ul className="text-sm">
+          <h4 className="font-semibold mb-3 text-white">Popular categories</h4>
+          <ul className="text-sm space-y-2 text-slate-300">
             <li>Electronics</li>
             <li>Fashion</li>
             <li>Travel</li>
@@ -38,7 +41,11 @@ export default function Footer(){
           </ul>
         </div>
       </div>
-      <div className="py-4 text-center text-sm">© {new Date().getFullYear()} Deals+. All rights reserved.</div>
+
+      <div className="border-t border-white/10 py-4 text-center text-sm text-slate-400">
+        © {new Date().getFullYear()} Deals+. All rights reserved.
+      </div>
     </footer>
   )
 }
+

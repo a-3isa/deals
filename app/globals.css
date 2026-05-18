@@ -1,19 +1,33 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root{
-  --brand-accent: #4c584f;
-  --soft-bg: #eaf6ec;
-  --footer-bg: #0b0b0b;
+  --brand-accent: #0d9488;
+  --brand-accent-2: #0f766e;
+  --ink: #0f172a;
+  --muted: #475569;
+  --soft-bg: #ecfeff;
+  --soft-panel: #f8fafc;
+  --footer-bg: #0b1020;
+  --border: #dbeafe;
 }
 
 html, body, #__next { height: 100%; }
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+  font-family: "Plus Jakarta Sans", "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+  color: var(--ink);
+  background:
+    radial-gradient(900px 400px at 95% -10%, #ccfbf1 0%, transparent 65%),
+    radial-gradient(900px 460px at 5% 0%, #dbeafe 0%, transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, var(--soft-bg) 100%);
+}
+
+a, button {
+  transition: all 220ms ease;
 }
 
 /* Typography sizing inspired by Rakuten-like mobile layout */
@@ -25,4 +39,55 @@ h2 { font-size: 1.5rem; } /* 24px */
 
 p.lead { font-size: 1rem; }
 @media (min-width: 768px) { p.lead { font-size: 1.125rem; } }
+
+.panel {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 38px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+.hero-title {
+  letter-spacing: -0.025em;
+}
+
+.fade-up {
+  animation: fadeUp 700ms ease both;
+}
+
+.stagger-1 { animation-delay: 80ms; }
+.stagger-2 { animation-delay: 160ms; }
+.stagger-3 { animation-delay: 240ms; }
+.stagger-4 { animation-delay: 320ms; }
+
+.lift-hover {
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.lift-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 46px rgba(15, 23, 42, 0.14);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .stagger-1,
+  .stagger-2,
+  .stagger-3,
+  .stagger-4 {
+    animation: none !important;
+  }
+}
+
 
